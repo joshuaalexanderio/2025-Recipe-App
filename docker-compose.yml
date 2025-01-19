@@ -1,11 +1,24 @@
 version: '3'
 services:
   app:
-    build:
-      context: .  # The current directory is used as the build context # Optional if the Dockerfile is named Dockerfile
+    build: .
     ports:
-      - "8080:8080"  # Maps container's port 8080 to the host's port 8080
+      - "8080:8080"
     volumes:
       - .:/app  
     environment:
       - PORT=8080  
+    command: ["npx", "nodemon", "src/index.js"]  # Command for development
+    profiles:
+      - development
+    
+    app-prod:
+
+      build: .
+      ports:
+        - "8080:8080"
+      volumes:
+        - .:/app
+      command: ["npm", "start"]  # Command for production
+      profiles:
+        - production
