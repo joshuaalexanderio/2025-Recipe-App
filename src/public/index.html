@@ -1,12 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Index page!</h1>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+    <title>Recipes</title>
+  </head>
+  <body>
+    <main>
+      <div class="recipe-grid-container">
+        <div class="recipe-card">
+          <div class="tooltip">
+            <form action="/send-eng-muff" method="POST">
+              <input
+                class="add-button block corner"
+                type="submit"
+                value="eng-muff"
+                name="eng-muff"
+              />
+            </form>
+            <div class="submit-text">&plus;</div>
+            <span class="tooltiptext"> Add all ingredients to list </span>
+          </div>
+
+          <a
+            href="https://www.youtube.com/watch?v=zIfxBh0RF30&t=33s&ab_channel=J.KenjiL%C3%B3pez-Alt"
+            target="_blank"
+          >
+            <span>
+              English Muffin <br />
+              Breakfast Sandwich
+            </span>
+          </a>
+          <section>
+            <div class="dropdown">
+              <button type="button">Ingredients:</button>
+              <ul>
+                <li class="eng-muff">English Muffin</li>
+                <li class="eng-muff">
+                  Protein(bacon, canadian bacon, sausage)
+                </li>
+                <li class="eng-muff">Green onion</li>
+                <li class="eng-muff">Jalape&ntilde;o</li>
+                <li class="eng-muff">English Muffin</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+        <div class="recipe-card">
+          <div class="tooltip">
+            <form action="/send-chicken-salad" method="POST">
+              <input
+                class="add-button"
+                type="submit"
+                value="chicken-salad"
+                name="Add all to list"
+                alt="Add all to list"
+              />
+            </form>
+            <div class="submit-text">&plus;</div>
+            <span class="tooltiptext"> Add all ingredients to list </span>
+          </div>
+
+          <a
+            href="https://www.ethanchlebowski.com/cooking-techniques-recipes/t0anf7gvf70tush8yzuwc362hwict4"
+            target="_blank"
+            ><span>Grilled Chicken Salad</span></a
+          >
+          <section>
+            <div class="dropdown">
+              <button type="button">Ingredients:</button>
+              <ul>
+                <li class="chicken-salad">
+                  6 boneless, skinless chicken thighs(or breast)
+                </li>
+                <li class="chicken-salad">mayo</li>
+                <li class="chicken-salad">plain yogurt</li>
+                <li class="chicken-salad">2 cloves garlic</li>
+                <li class="chicken-salad">1/2 lemon</li>
+                <li class="chicken-salad">romaine lettuce, chopped</li>
+                <li class="chicken-salad">cherry tomatoes</li>
+                <li class="chicken-salad">cucumbers</li>
+                <li class="chicken-salad">feta cheese</li>
+                <li class="chicken-salad">pickled onions</li>
+                <li class="chicken-salad">crisp tortillas or pita</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+        <div class="recipe-card">
+          <div class="tooltip">
+            <form action="/send-orzo-salad" method="POST">
+              <input
+                type="submit"
+                value="orzo-salad"
+                name="orzo-salad"
+                class="add-button"
+              />
+            </form>
+            <div class="submit-text">&plus;</div>
+            <span class="tooltiptext"> Add all ingredients to list </span>
+          </div>
+
+          <a
+            href="https://www.ethanchlebowski.com/cooking-techniques-recipes/orzo-salad?rq=orzo"
+            target="_blank"
+          >
+            <span>Orzo Salad</span></a
+          >
+          <section>
+            <div class="dropdown">
+              <button type="button">Ingredients:</button>
+              <ul>
+                <li class="orzo-salad">1/2lb orzo</li>
+                <li class="orzo-salad">1 can garbanzo beans/chickpeas</li>
+                <li class="orzo-salad">1/4 red onion</li>
+                <li class="orzo-salad">8-10 frussel sprouts</li>
+                <li class="orzo-salad">fresh parsley</li>
+                <li class="orzo-salad">feta cheese</li>
+                <li class="orzo-salad">1 clove garlic</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+        <div class="recipe-card">
+          <div class="tooltip">
+            <form action="/send-chicken-burrito" method="POST">
+              <input
+                type="submit"
+                value="chicken-burrito"
+                name="chicken-burrito"
+                class="add-button"
+              />
+            </form>
+            <div class="submit-text">&plus;</div>
+            <span class="tooltiptext"> Add all ingredients to list </span>
+          </div>
+          <a
+            href="https://www.ethanchlebowski.com/cooking-techniques-recipes/an-above-average-18-minute-chicken-burrito"
+            target="_blank"
+          >
+            <span>Grilled Chicken Burrito</span></a
+          >
+          <section>
+            <div class="dropdown">
+              <button type="button">Ingredients:</button>
+              <ul>
+                <li class="chicken-burrito">
+                  2 boneless skinless chicken thighs(or breast)
+                </li>
+                <li class="chicken-burrito">1 tbsp mayo</li>
+                <li class="chicken-burrito">2 cloves garlic</li>
+                <li class="chicken-burrito">lime zest</li>
+                <li class="chicken-burrito">jala&ntilde;o</li>
+                <li class="chicken-burrito">1 can pinto beans</li>
+                <li class="chicken-burrito">Sour cream</li>
+                <li class="chicken-burrito">Thinly sliced lettuce</li>
+                <li class="chicken-burrito">pickled onions</li>
+                <li class="chicken-burrito">queso fresco</li>
+                <li class="chicken-burrito">hot sauce</li>
+                <li class="chicken-burrito">fresh cilantro</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+        <div class="recipe-card">
+          <div class="tooltip">
+            <form action="/send-cart-chicken" method="POST">
+              <input
+                type="submit"
+                value="cart-chicken"
+                name="cart-chicken"
+                class="add-button"
+              />
+            </form>
+            <div class="submit-text">&plus;</div>
+            <span class="tooltiptext"> Add all ingredients to list </span>
+          </div>
+
+          <a
+            href="https://www.ethanchlebowski.com/cooking-techniques-recipes/street-cart-chicken-amp-yellow-rice?rq=halal"
+            target="_blank"
+          >
+            <span>Street Cart Chicken & Yellow Rice</span></a
+          >
+          <section>
+            <div class="dropdown">
+              <button type="button">Ingredients:</button>
+              <ul>
+                <li class="cart-chicken">4 Boneless Chicken thighs</li>
+                <li class="cart-chicken">5 whole cloves</li>
+                <li class="cart-chicken">1/2 tbps cumin seeds</li>
+                <li class="cart-chicken">3 cloves garlic</li>
+                <li class="cart-chicken">juice from 1/4 lemon</li>
+                <li class="cart-chicken">30g mayo</li>
+                <li class="cart-chicken">1/8 onion</li>
+                <li class="cart-chicken">basmati rice</li>
+                <li class="cart-chicken">1 cup chicken broth</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+        <div class="recipe-card">
+          <div class="tooltip">
+            <form action="/send-ricotta-pasta" method="POST">
+              <input
+                type="submit"
+                value="ricotta-pasta"
+                name="ricotta-pasta"
+                class="add-button"
+              />
+            </form>
+            <span class="tooltiptext"> Add all ingredients to list </span>
+            <div class="submit-text">&plus;</div>
+          </div>
+
+          <a
+            href="https://www.ethanchlebowski.com/cooking-techniques-recipes/ricotta-pasta-sauce-with-peas-amp-bacon?rq=ricotta"
+            target="_blank"
+          >
+            <span>Ricotta Pasta Sauce with Peas & Bacon</span></a
+          >
+          <section>
+            <div class="dropdown">
+              <button type="button">Ingredients:</button>
+              <ul>
+                <li class="ricotta-pasta">
+                  1/2 lb conchigilie, penne, or fusili pasta
+                </li>
+                <li class="ricotta-pasta">3oz frozen peas</li>
+                <li class="ricotta-pasta">2 slices thick cut bacon</li>
+                <li class="ricotta-pasta">ricotta</li>
+                <li class="ricotta-pasta">butter</li>
+                <li class="ricotta-pasta">parmigiano-reggiano</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+  </body>
 </html>

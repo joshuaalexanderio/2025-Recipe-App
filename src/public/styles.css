@@ -1,6 +1,189 @@
+* {
+  box-sizing: border-box;
+}
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f4f4f9;
-    color: #339;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+}
+main {
+  padding: 10%;
+  flex: 1 1 90%;
+}
+.recipe-grid-container {
+  display: grid;
+  width: min(90%, 125rem);
+  height: 100%;
+  margin: 5rem auto;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+}
+.recipe-card {
+  height: 300px;
+  text-align: center;
+  position: relative;
+}
+.recipe-card a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.recipe-card span {
+  font-size: 3rem;
+}
+.recipe-card h1 a:hover {
+  cursor: poiner;
+}
+section {
+  flex: 1 1 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dropdown {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+}
+.dropdown ul {
+  display: none;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.9);
+  margin-top: 0;
+  z-index: 999;
+  color: white;
+  padding: 20px;
+  width: 93%;
+}
+.newlist {
+  display: block !important;
+}
+.add-button {
+  float: right;
+  border-radius: 999px;
+  width: 50px;
+  height: 35px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 5px solid #950740 !important;
+  font-size: 0;
+  box-shadow: none;
+  border: none;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  z-index: 2;
+}
+.add-button:hover {
+  cursor: pointer;
+}
+/* ToolTip classses */
+.tooltip {
+  display: inline-block;
+  position: absolute;
+  right: 15px;
+}
+.tooltip .tooltiptext {
+  margin-left: 9px;
+  width: 320px;
+  visibility: hidden;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+  border: 1px solid #aeaeae;
+  position: absolute;
+  z-index: 1;
+  padding: 5px;
+  margin-top: -15px;
+  opacity: 0;
+  transition: opacity 0.5s;
+  font-size: 1rem;
+  top: 8px;
+}
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 5%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #aeaeae transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.submit-text {
+  position: absolute;
+  top: 53px;
+  right: 23.5px;
+  font-size: 2rem;
+  z-index: 1;
+}
+button {
+  border: none;
+  padding: 0;
+  background-color: (0, 0, 0, 0.1);
+  font-family: inherit;
+  padding: 40px;
+  pointer-events: all;
+  width: 100%;
+  z-index: 10;
+  font-size: 1.1rem;
+}
+button:focus + .dropdown-content {
+  display: block;
+}
+button:hover {
+  cursor: pointer;
+}
+.recipe-card:hover {
+  background: #ebeae4;
+}
+
+@media only screen and (max-width: 992px) {
+  .recipe-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 1rem;
+  }
+  .recipe-card span {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .recipe-card h1 {
+    font-size: 0.75rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .recipe-grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+  main {
+    padding: 10px;
+  }
+  .recipe-card h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .add-button {
+    top: 30px;
+  }
+  .submit-text {
+    top: 23px;
+  }
 }
