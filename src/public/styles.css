@@ -148,7 +148,7 @@ button:focus + .dropdown-content {
 button:hover {
   cursor: pointer;
 }
-.recipe-card:hover {
+.recipe-card a:hover {
   background: #ebeae4;
 }
 
